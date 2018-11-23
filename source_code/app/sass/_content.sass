@@ -1,0 +1,52 @@
+.content
+  width: 100%
+  min-height: calc(100vh - 225px)
+  margin-top: 10px
+  padding: 0 30px
+  display: flex
+  flex-direction: column
+  align-items: center
+  +wrapper()
+
+  &_search
+    +row-flex()
+    +xs(justify-content, center)
+    margin-top: 30px
+
+.search
+  &_field
+    flex-grow: 1
+    height: 35px
+    border: none
+    border-radius: 15px
+    box-shadow: 0 0 40px rgba(255, 255, 255, .6)
+    padding: 0 15px
+    +col()
+    +size(5)
+    +size-xs(6)
+    &:focus
+      outline: none
+      box-shadow: 0 0 40px rgba(255, 255, 255, .9)
+
+  &_btn
+    border: none
+    border-radius: 15px
+    background-color: #fff
+    box-shadow: 0 0 40px rgba(255, 255, 255, .6)
+    color: $my-color
+    +col()
+    +size(2)
+    +size-xs(10)
+    +xs-block
+      height: 35px
+      margin-top: 10px
+    &:focus
+      outline: none
+    &:hover
+      cursor: pointer
+      box-shadow: 0 0 40px rgba(255, 255, 255, .9)
+
+.nothing
+  color: #fff
+  display: block
+  margin: 30px auto auto

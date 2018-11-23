@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="debug">
+    <div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="body_box" id="body_box">
+    <!-- Шапка сайта -->
+    <header class="header">
+      <div class="header__logo">
+        <img src="./img/bunny.svg" alt="">
+      </div>
+      <h2 class="header__title">
+        Best movies
+      </h2>
+    </header>
+
+    <!-- Контент сайта -->
+    <main class="content" id="contentWrap">
+      <form class="content_search">
+        <input type="text" class="search_field" id="name_field" placeholder="Name">
+        <input type="text" class="search_field" id="year_field" placeholder="Year">
+        <input type="button" class="search_btn" value="Search" id="search">
+      </form>
+
+      <div id="content" class="content_box">
+
+      </div>
+      
+    </main>
+
+    <!-- Футер сайта -->
+    <footer class="footer">
+      <div class="contacts">
+        <a href="#">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fab fa-vk"></i>
+        </a>
+      </div>
+    </footer>
+  </div>
+  
+  <script src="./js/libs.min.js"></script>
+  <script src="./js/httpGet.js"></script>
+  <script src="./js/clearContent.js"></script>
+  <script src="./js/showFilm.js"></script>
+  <script src="./js/showInfo.js"></script>
+  <script src="./js/pagination.js"></script>
+  <script src="./js/index.js"></script>
+
+</body>
+</html>

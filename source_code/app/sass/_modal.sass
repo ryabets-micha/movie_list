@@ -1,0 +1,122 @@
+.modal
+  &_overlay
+    width: 100%
+    height: 100%
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba(255, 255, 255, .8)
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 8887
+  
+  &_item
+    z-index: 8888
+    background-color: $my-color
+    border-radius: 15px
+    box-shadow: 0 0 60px rgba(40, 44, 52, 1)
+    box-sizing: border-box
+    padding: 30px
+    width: 90%
+    max-width: 1200px
+    position: relative
+
+  &_scroll
+    display: flex
+    align-items: center
+    border-radius: 15px
+
+  &_exit
+    display: block
+    position: absolute
+    top: -7px
+    right: -7px
+    width: 25px
+    height: 25px
+    z-index: 10000
+    cursor: pointer
+    border-radius: 50%
+    background-color: rgba(204, 204, 204, .7)
+    &::before,
+    &::after
+      content: ''
+      position: absolute
+      top: calc(50% - 1.5px)
+      right: calc(50% - 12.5px)
+      width: 25px
+      height: 3px
+      background-color: rgba(255, 255, 255, .8)
+      border-radius: 2px
+      z-index: 9999
+    &::before
+      transform: rotate(45deg)
+    &::after
+      transform: rotate(-45deg)
+    &:hover
+      background-color: rgba(0, 0, 0, .5)
+      &::before,
+      &::after
+        background-color: rgba(255, 255, 255, 1)
+
+  &_logo
+    min-width: 200px
+    max-width: 200px
+    box-sizing: border-box
+    > img
+      width: 100%
+      height: auto
+      border-radius: 15px
+
+  &_text
+    color: #fff
+    padding-left: 30px
+    display: flex
+    flex-direction: column
+
+  &_title
+    width: 100%
+    text-align: center
+    font-size: 30px
+    font-weight: 600
+
+  &_description
+    margin: 20px 0
+    flex-grow: 1
+
+  &_vote
+    width: 100%
+    display: flex
+    justify-content: space-between
+    padding: 10px 15px
+  &_average,
+  &_count
+    > span
+      font-weight: bold
+  &_count
+    text-align: right
+
+@media (max-width: 690px)
+  .modal
+    &_item
+      height: 80%
+    &_scroll
+      flex-direction: column
+      overflow-y: scroll
+      position: absolute
+      top: 30px
+      right: 30px
+      bottom: 30px
+      left: 30px
+    &_logo
+      width: 100%
+      height: 300px
+      text-align: center
+      margin-bottom: 15px
+      > img
+        height: 100%
+        width: auto
+    &_text
+      padding: 0
